@@ -26,8 +26,9 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:background="@drawable/shape"
+            android:fontFamily="@font/aldrichregular"
             android:onClick="playGame"
-            android:text="@string/play"
+            android:text="@string/play_game"
             android:textColor="#ffffff"
             android:textSize="18sp" />
 
@@ -36,6 +37,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginTop="50dp"
+            android:fontFamily="@font/aldrichregular"
             android:background="@drawable/shapetwo"
             android:text="@string/exit"
             android:textColor="#ffffff"

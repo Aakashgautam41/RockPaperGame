@@ -67,25 +67,28 @@
             android:id="@+id/textRock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrichregular"
             android:layout_weight="1"
             android:text="User"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/vs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrichregular"
             android:layout_weight="1"
             android:text="Vs"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textPaper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrichregular"
             android:layout_weight="1"
             android:text="Pc"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
     </LinearLayout>
 
     <TextView
@@ -96,6 +99,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/aldrichregular"
         android:paddingLeft="45dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"

@@ -20,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
 
         play = findViewById(R.id.play);
         exit = findViewById(R.id.exit);
-//        final Typeface typeface = Typeface.createFromAsset(getAssets(), "font/aldrichregular.ttf");
-//        play.setTypeface(typeface);
-//        Typeface typeface2 = Typeface.createFromAsset(getAssets(), "font/aldrichregular.ttf");
-//        exit.setTypeface(typeface);
 
-
-
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.this.finish();
+                System.exit(0);
+            }
+        });
 
     }
     public void playGame(View view){

@@ -3,13 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:ignore="NamespaceTypo">
+    tools:ignore="ExtraText,NamespaceTypo">
     <stroke android:width="0dp"
         android:color="#FFFFFF"/>
     <gradient
         android:angle="180"
-        android:startColor="#0e90d2"
-        android:endColor="#33aedc"/>
+        android:startColor="#3c3b3f"
+        android:endColor="#5e4485"/>
+        <!--android:startColor="#0e90d2"-->
+        <!--android:endColor="#33aedc"/>-->
+
     <corners
         android:bottomLeftRadius="400dp"
         android:bottomRightRadius="400dp"
