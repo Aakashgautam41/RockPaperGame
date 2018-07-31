@@ -1,6 +1,7 @@
 package com.example.aakash.rockvspaper;
 
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ public class SecondActivity extends AppCompatActivity {
     static TextView textPc;
     TextView winner;
     Button rock,paper,scissor;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +46,18 @@ public class SecondActivity extends AppCompatActivity {
 
                 if (userText=="Rock" && pcText=="Rock"){
                   winner.setText("  Draw");
+                  mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.draw);
+                  mediaPlayer.start();
                 }
                 else if(userText=="Rock" && pcText=="Paper"){
                     winner.setText("You lost");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youlose);
+                    mediaPlayer.start();
                 }
                 else if(userText=="Rock" && pcText=="Scissor"){
                     winner.setText("You Win");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youwin);
+                    mediaPlayer.start();
                 }
             }
 
@@ -67,12 +75,18 @@ public class SecondActivity extends AppCompatActivity {
 
                 if (userText=="Paper" && pcText=="Paper"){
                     winner.setText("  Draw");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.draw);
+                    mediaPlayer.start();
                 }
                 else if(userText=="Paper" && pcText=="Scissor"){
                     winner.setText("You lost");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youlose);
+                    mediaPlayer.start();
                 }
                 else if(userText=="Paper" && pcText=="Rock"){
                     winner.setText("You Win");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youwin);
+                    mediaPlayer.start();
                 }
             }
         });
@@ -88,12 +102,18 @@ public class SecondActivity extends AppCompatActivity {
 
                 if (userText=="Scissor" && pcText=="Scissor"){
                     winner.setText("  Draw");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.draw);
+                    mediaPlayer.start();
                 }
                 else if(userText=="Scissor" && pcText=="Rock"){
                     winner.setText("You lost");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youlose);
+                    mediaPlayer.start();
                 }
                 else if(userText=="Scissor" && pcText=="Paper"){
                     winner.setText("You Win");
+                    mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youwin);
+                    mediaPlayer.start();
                 }
             }
         });
