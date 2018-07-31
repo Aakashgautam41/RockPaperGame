@@ -12,12 +12,14 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
 
     // Get ui elements
-    TextView textUser;
-    TextView vs;
+    TextView textUser,vs,userWins,pcWins;
     static TextView textPc;
     TextView winner;
     Button rock,paper,scissor;
     MediaPlayer mediaPlayer;
+
+     static int userStat = 0;
+     static int pcStat = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class SecondActivity extends AppCompatActivity {
         rock = findViewById(R.id.rock);
         paper = findViewById(R.id.paper);
         scissor = findViewById(R.id.scissor);
+
+        userWins = findViewById(R.id.userStat);
+        pcWins = findViewById(R.id.pcStat);
 
         rock.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,11 +58,19 @@ public class SecondActivity extends AppCompatActivity {
                     winner.setText("You lost");
                     mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youlose);
                     mediaPlayer.start();
+
+                    pcStat = pcStat+1;
+                    String newPcStat = String.valueOf(pcStat);
+                    pcWins.setText(newPcStat);
                 }
                 else if(userText=="Rock" && pcText=="Scissor"){
                     winner.setText("You Win");
                     mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youwin);
                     mediaPlayer.start();
+
+                    userStat = userStat+1;
+                    String newUserStat = String.valueOf(userStat);
+                    userWins.setText(newUserStat);
                 }
             }
 
@@ -82,11 +95,19 @@ public class SecondActivity extends AppCompatActivity {
                     winner.setText("You lost");
                     mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youlose);
                     mediaPlayer.start();
+
+                    pcStat = pcStat+1;
+                    String newPcStat = String.valueOf(pcStat);
+                    pcWins.setText(newPcStat);
                 }
                 else if(userText=="Paper" && pcText=="Rock"){
                     winner.setText("You Win");
                     mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youwin);
                     mediaPlayer.start();
+
+                    userStat = userStat+1;
+                    String newUserStat = String.valueOf(userStat);
+                    userWins.setText(newUserStat);
                 }
             }
         });
@@ -109,11 +130,19 @@ public class SecondActivity extends AppCompatActivity {
                     winner.setText("You lost");
                     mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youlose);
                     mediaPlayer.start();
+
+                    pcStat = pcStat+1;
+                    String newPcStat = String.valueOf(pcStat);
+                    pcWins.setText(newPcStat);
                 }
                 else if(userText=="Scissor" && pcText=="Paper"){
                     winner.setText("You Win");
                     mediaPlayer = MediaPlayer.create(SecondActivity.this,R.raw.youwin);
                     mediaPlayer.start();
+
+                    userStat = userStat+1;
+                    String newUserStat = String.valueOf(userStat);
+                    userWins.setText(newUserStat);
                 }
             }
         });
